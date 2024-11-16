@@ -1,4 +1,5 @@
-export const Books = [
+
+export const bookData = [
   {
     "id": 1,
     "title": "The Hunger Games",
@@ -1799,4 +1800,4 @@ export const Books = [
     "Quote2": "“I decided as long as I'm going to hell, I might as well do it thoroughly.”",
     "Quote3": "“When life offers you a dream so far beyond any of your expectations, it’s not reasonable to grieve when it comes to an end.”"
   }
-]
+];
