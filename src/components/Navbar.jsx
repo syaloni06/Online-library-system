@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Navbar = () => {
-    const bookItems = useSelector((store) => store.books.data);
-    console.log(bookItems);
+  const bookItems = useSelector((store) => store.books.data);
+  console.log(bookItems);
   return (
     <>
       <div>
-        <ul>
+        <ul className="flex justify-evenly">
           <Link to={"/"}>
             <li>Home</li>
           </Link>
