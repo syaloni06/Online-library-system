@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Home = () => {
+  const navigate = useNavigate();
   const books = useSelector((store) => store.books.data);
   const categories = [...new Set(books.map((book) => book.category))];
   const popular_books = [...books]
@@ -8,13 +9,15 @@ const Home = () => {
     .reverse()
     .filter((book) => book.rating > 4)
     .slice(0, 15);
+    const handleOnClick = (category) => {
+      navigate(`/books/${category}`);
+    }
   return (
     <>
-      <h1>Home</h1>
       <section>
         <ul className="flex flex-wrap gap-12">
           {categories.map((category, index) => (
-            <li key={index}>{category}</li>
+            <button onClick={() => handleOnClick(category)} key={index}>{category}</button>
           ))}
         </ul>
       </section>
