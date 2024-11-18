@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-
+import { useNavigate, useParams } from "react-router-dom";
+import { IoArrowBackCircle } from "react-icons/io5";
 const BookDetails = () => {
   const { id } = useParams();
   const book = useSelector((store) =>
     store.books.data.find((b) => b.id === parseInt(id, 10))
   );
+  const navigate = useNavigate();
   if (!book) {
     return <p>Book not found.</p>;
   }
@@ -27,6 +28,9 @@ const BookDetails = () => {
       <p className="text-sm mb-2.5 text-gray-600">Author: {book.authors}</p>
       <p className="text-sm mb-2.5 text-gray-600 font-extrabold">Rating: {book.rating}</p> 
       </div>
+      <button onClick={() => navigate(-1)} className="flex">
+      <IoArrowBackCircle className="self-center text-2xl" /> Back 
+      </button>
     </div>
   );
 };

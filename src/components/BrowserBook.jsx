@@ -1,7 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 const BrowserBook = () => {
   const category = useParams();
@@ -38,7 +37,7 @@ const BrowserBook = () => {
             placeholder="Search by title or author"
           />
         </div>
-        <div className="self-center text-2xl p-2 bg-gray-300 rounded-r-md"> 
+        <div className="self-center text-2xl p-2 bg-gray-300 rounded-r-md ">
           <FaSearch />
         </div>
       </section>
