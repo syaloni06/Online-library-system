@@ -480,7 +480,7 @@ export const bookData = [
     "review_count": 50846,
     "category": "Fiction",
     "genre_list": "Young Adult,Fiction,Contemporary",
-    "image_url": "https://images.gr-assets.com/books/1520093244l/22628.jpg",
+    "image_url": "https://cdn.kobo.com/book-images/d1b88c48-6fb1-4a9b-a813-5117d35f3d09/353/569/90/False/the-perks-of-being-a-wallflower-1.jpg",
     "Quote1": "“Wit beyond measure is man’s greatest treasure.”",
     "Quote2": "“Indifference and neglect often do much more damage than outright dislike.”",
     "Quote3": "“Things we lose have a way of coming back to us in the end, if not always in the way we expect.”"

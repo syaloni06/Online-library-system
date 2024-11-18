@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 const Navbar = () => {
-  const bookItems = useSelector((store) => store.books.data);
-  console.log(bookItems);
   return (
     <>
       <div>
