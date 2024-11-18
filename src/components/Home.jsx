@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Home = () => {
   const navigate = useNavigate();
@@ -12,6 +12,9 @@ const Home = () => {
     const handleOnClick = (category) => {
       navigate(`/books/${category}`);
     }
+    const handleViewDetails = (id) => {
+      navigate(`/book/${id}`);
+    };
   return (
     <>
       <section>
@@ -43,9 +46,9 @@ const Home = () => {
                 <p className="text-sm mb-2.5 text-gray-600">
                   Rating: {book.rating}
                 </p>
-                <Link to={`/books/${book.id}`} className="text-xs">
+                <button onClick={() => handleViewDetails(book.id)} className="text-xs text-blue-500 hover:underline">
                   View More Details
-                </Link>
+                </button>
               </div>
             </li>
           ))}
