@@ -12,26 +12,32 @@ const BookDetails = () => {
   }
 
   return (
-    <div className="m-20 w-1/2 flex-col gap-10">
-      <div>
-      <img
-        src={book.image_url}
-        alt={book.title}
-        width="100px"
-        height="100px"
-        className="book-cover w"
-      />
-      <h1 className="text-base mb-2.5">{book.title}</h1>
-      </div>
-      <div>
-      <p className="text-sm mb-2.5 text-gray-600">{book.description}</p>
-      <p className="text-sm mb-2.5 text-gray-600">Author: {book.authors}</p>
-      <p className="text-sm mb-2.5 text-gray-600 font-extrabold">Rating: {book.rating}</p> 
-      </div>
-      <button onClick={() => navigate(-1)} className="flex">
-      <IoArrowBackCircle className="self-center text-2xl" /> Back 
-      </button>
+    <div className="m-20 w-3/4 flex flex-col gap-8 bg-purple-50 p-6 rounded-lg shadow-md">
+      <button
+    onClick={() => navigate(-1)}
+    className="flex items-center gap-2 self-start text-purple-700 hover:text-purple-800 text-lg font-medium transition-colors duration-200 hover:scale-105"
+  >
+    <IoArrowBackCircle className="text-2xl" /> Back
+  </button>
+  <div className="flex gap-6 items-center">
+    <img
+      src={book.image_url}
+      alt={book.title}
+      className="w-44 h-56 object-fill rounded-md shadow-sm"
+    />
+    <div>
+    <h1 className="text-4xl font-bold text-purple-800">{book.title}</h1>
+    <p className="text-gray-800 text-xl italic font-semibold">Author: {book.authors}</p>
+    <p className=" text-base text-gray-800 font-semibold italic">
+      Rating: {book.rating}
+    </p>
     </div>
+  </div>
+  <div className="flex flex-col gap-4">
+    <p className="text-gray-950 text-lg text-justify">{book.description}</p>
+  </div>
+</div>
+
   );
 };
 
