@@ -8,7 +8,7 @@ const BookCard = (props) => {
   };
   return (
     <>
-      <div className="w-60 bg-white m-5 flex flex-col rounded-lg shadow-b hover:shadow-purple-800 hover:scale-105 overflow-hidden border-2 hover:border-purple-800 p-2">
+      <div className="w-72 lg:w-60 bg-white m-5 flex flex-col rounded-lg shadow-b hover:shadow-purple-800 hover:scale-105 overflow-hidden border-2 hover:border-purple-800 p-2">
         <img
           src={props.book.image_url}
           alt={props.book.title}
