@@ -23,16 +23,16 @@ npm install
 npm run dev
 ```
 ## Usage
-1. ### Home Page
+### 1. Home Page
 - Browse the library's book collection.
 - Filter books by category or search by title/author.
-2. ### Search Book
+### 2. Search Book
 - Use the search bar to find books by title or author dynamically.
-3. ### Add New Book
+### 3. Add New Book
 - Go to Add Book.
 - Fill in details: Title, Author(s), Category, Rating, Description, and Image URL.
 - Click Add Book to add it to the library.
-4. ### Book Details
+### 4. Book Details
 - Click on a book to view its details, including title, author(s), rating, and description.
-5. ### Responsive Design
+### 5. Responsive Design
 - Optimized for mobile, tablet, and desktop devices.
