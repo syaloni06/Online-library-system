@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"; // Import useSelector to access the Redux store
 import { useNavigate, useParams } from "react-router-dom"; // Import hooks for navigation and getting route parameters
 import { IoArrowBackCircle } from "react-icons/io5"; // Import a back arrow icon from react-icons
-
+import { FaStar } from "react-icons/fa6";
 const BookDetails = () => {
   // Extract the book ID from the URL using useParams hook
   const { id } = useParams();
@@ -46,15 +46,15 @@ const BookDetails = () => {
           <p className="text-gray-800 text-base sm:text-xl italic font-semibold">
             Author: {book.authors} {/* Display the book author */}
           </p>
-          <p className="text-sm sm:text-base text-gray-800 font-semibold italic">
-            Rating: {book.rating} {/* Display the book rating */}
+          <p className="flex gap-1 text-sm sm:text-base text-gray-800 font-semibold italic">
+            Rating:<FaStar className="self-center"/> {book.rating} {/* Display the book rating */}
           </p>
         </div>
       </div>
 
       {/* Book description */}
       <div className="flex flex-col gap-4">
-        <p className="text-gray-950 text-lg sm:text-xl text-justify">
+        <p className="text-gray-950 text-base sm:text-lg text-justify">
           {book.description} {/* Display the book description */}
         </p>
       </div>

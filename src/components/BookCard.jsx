@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom"; // Hook to handle page navigation
-
+import { FaStar } from "react-icons/fa6";
 const BookCard = (props) => {
   const navigate = useNavigate(); // Initialize navigate function for routing
   
@@ -33,8 +33,8 @@ const BookCard = (props) => {
           </p>
 
           {/* Book Rating */}
-          <p className="text-base mb-2.5 text-gray-600 font-semibold">
-            Rating: {props.book.rating}
+          <p className="flex gap-1 text-base mb-2.5 text-gray-600 font-semibold">
+            Rating:<FaStar className="self-center"/>{props.book.rating}
           </p>
 
           {/* Button to navigate to the book's detail page */}
