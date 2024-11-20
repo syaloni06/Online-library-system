@@ -67,6 +67,7 @@ const AddBook = () => {
               name="title"
               value={formValues.title}
               onChange={handleChange}
+              placeholder="Enter the title of the book"
               className="w-full px-4 py-2 border-2 rounded-lg border-purple-800 focus:ring-2 focus:ring-purple-500 focus:outline-none"
             />
             {errors.title && <p className="text-red-600 text-sm">{errors.title}</p>} {/* Display error message for title */}
@@ -81,6 +82,7 @@ const AddBook = () => {
               name="authors"
               value={formValues.authors}
               onChange={handleChange}
+              placeholder="Enter author's name"
               className="w-full px-4 py-2 border-2 rounded-lg border-purple-800 focus:ring-2 focus:ring-purple-500 focus:outline-none"
             />
             {errors.authors && <p className="text-red-600 text-sm">{errors.authors}</p>} {/* Display error message for authors */}
@@ -114,6 +116,7 @@ const AddBook = () => {
               name="rating"
               value={formValues.rating}
               onChange={handleChange}
+              placeholder="Rating"
               className="w-full px-4 py-2 border-2 rounded-lg border-purple-800 focus:ring-2 focus:ring-purple-500 focus:outline-none"
             />
             {errors.rating && <p className="text-red-600 text-sm">{errors.rating}</p>} {/* Display error message for rating */}
@@ -129,6 +132,7 @@ const AddBook = () => {
             name="description"
             value={formValues.description}
             onChange={handleChange}
+            placeholder="Description of the book"
             className="w-full px-4 py-2 border-2 rounded-lg border-purple-800 focus:ring-2 focus:ring-purple-500 focus:outline-none"
             rows="4"
           />
@@ -145,6 +149,7 @@ const AddBook = () => {
             name="image_url"
             value={formValues.image_url}
             onChange={handleChange}
+            placeholder="Link of the Image"
             className="w-full px-4 py-2 border-2 rounded-lg border-purple-800 focus:ring-2 focus:ring-purple-500 focus:outline-none"
           />
           {errors.image_url && <p className="text-red-600 text-sm">{errors.image_url}</p>} {/* Display error message for image URL */}
